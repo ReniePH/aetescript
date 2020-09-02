@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="search.js"></script>
+    <title>Document</title>
+</head>
+<body oncontextmenu="return false">
+    <h1 align="center">ALLEASY APP TESTSCRIPT</h1>
+    <input id="myInput" type="text" placeholder="Search Keywords..">
+    <table>
+        <thead>
+          <tr>
+            <th>Case</th>
+            <th>Process</th>
+            <th>Input</th>
+            <th>Expected Result</th>
+            <th>User Remarks</th>
+          </tr>
+        </thead>
+        <tbody id="myTable">
+          <tr>
+            <td data-column="Case">A. App Download
+      </td>
+            <td data-column="Process"><li>For android users, download from Google PlayStore</li>
+              <li>For iOS users, click the link to download AllEasy app.
+      </li>
+              <li>For Huawei users, click the link to download AllEasy app.
+      </li>
+      </td>
+            <td data-column="Input"><li>https://play.google.com/store/apps/details?id=net.alleasy.app&hl=en
+      </li><li>https://apps.apple.com/ph/app/alleasy/id1459525405
+      </li>
+        <li>https://appgallery5.huawei.com/#/app/C102508321
+      </li>
+      </td>
+            <td data-column="Expected Result">AllEasy app will be downloaded and install to the phone</td>
+          </tr>
+          <tr>
+            <td data-column="Case">B. Starting AllEasy Mobile app 
+            </td>
+            <td data-column="Process">Click AllEasy app icon from mobile phone 
+            </td>
+            <td data-column="Input">- - -</td>
+            <td data-column="Expected Result">App start with AllEasy splash screen.
+            </td>
+          </tr>
+          <tr>
+            <td data-column="Case">C. Sign Up(NEW)
+            </td>
+            <td data-column="Process"><ol><li>Click SIGNUP button</li><li>Enter mobile number to register
+            </li><li>Click REGISTER button
+            </li><li>Enter 6-digit OTP 
+            </li><li>Click Submit Button
+            </li><li>Click CONTINUE button
+            </li>
+            <li>Enter subscriber details
+            </li><li>Click CONTINUE button
+            </li><li>Click PROCEED button
+            </li><li>Enroll 6-digit Mobile PIN
+            </li>
+            <li>Click Submit
+            </li><li>Click CONTINUE button
+            </li></ol>
+            </td>
+            <td data-column="Input"><ol><li></li><li>Your mobile number
+            </li><li></li><li>6-digit OTP received via SMS
+            </li><li></li>
+                <li></li><li><ul><li>First Name
+                </li><li>Last Name
+                </li><li>Birth Date
+                </li><li>Email address
+                </li><li>Password
+                </li></ul></li><li></li><li></li><li><ul><li>6-Digit PIN
+                </li><li>Same 6-Digit PIN (Confirm)
+                </li></ul></li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li>Sign up screen will appear on screen
+            </li><li> 
+</li><li><ul><li>6-digit OTP sent to mobile number
+            </li><li>6-digit OTP sent to mobile number 
+            </li></ul></li><li></li>
+                <li>Mobile verification dialog appear
+                </li><li>KYC screen appear
+                </li><li></li><li>Confirm details dialog appear
+                </li><li>Redirect to PIN enrollment screen if successfull
+                </li><li></li><li>Registration status dialog appear
+                </li><li>Redirect to app dashboard
+                </li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">D. Login
+            </td>
+            <td data-column="Process"><ol><li>Click the AllEasy App
+            </li><li>Click the Login button
+            </li><li>Submit valid login credentials
+            </li><li>Enter valid 6-digit PIN
+            </li></ol></td>
+            <td data-column="Input"><ol><li></li><li></li><li><ul><li>Your registered Email/Mobile Number
+            </li><li>Your registered Password
+            </li></ul></li><li>Your registered 6-digit PIN
+            </li></ol></td>
+            <td data-column="Expected Result"><ol><li>AllEasy welcome screen will appear
+            </li><li>Login input form will appear
+            </li><li>You will be redirected to PIN screen
+            </li><li>You will be redirected to the homescreen
+            </li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">E. Account Linking
+                <li>For subscribers with AllBank Account</li>
+            </td>
+            <td data-column="Process"><ol><li>Click CASH IN from app dashboard</li><li>Click LINKED ACCOUNTS tab
+            </li><li>Click LINK AN ACCOUNT Button
+            </li><li>Select prefered bank
+            </li><li>Fill out bank KYC form
+            </li><li>Click SUBMIT button to continue
+            </li><li>Enter 7-digit OTP from bank via sms
+            </li><li>Click CONTINUE button
+            </li><li>Select bank account to link
+            </li>
+            <li>Click CONFIRM button
+            </li><li>Click DONE button
+            </li></ol>
+            </td>
+            <td data-column="Input"><ol><li></li><li></li><li></li><li>AllBank 
+            </li><li><ul><li>Last Name
+            </li><li>First Name
+            </li><li>Middle Name
+            </li><li>Date of Birth
+            </li></ul></li>
+                <li></li><li>Your received 7-digit OTP via SMS
+                </li><li></li><li>pick an account
+                </li><li></li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li>Cash In screen appear on screen
+            </li><li>(List of linked bank acounts and available banks is listed) If you already have linked account(s), list of linked bank acounts will apeear and available banks is listed
+            </li><li>List of available bank appear
+            </li><li>Allbank enrollment form appear
+            </li><li></li>
+                <li><ul><li>7-digit One time PIN will be sent to the mobile number linked to bank account</li><li>OTP screen appear
+                </li></ul>
+                </li><li></li><li>Account list screen appear
+                </li><li></li><li>Account linking status dialog appear
+                </li><li>Redirect to Cash In, linked Accounts with enrolled account listed
+                </li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">F. 1. Loading via Linked Account
+            </td>
+            <td data-column="Process"><ol><li>Click CASH IN from app dashboard</li><li>Click LINKED ACCOUNTS tab
+            </li><li>Enter load request amount
+            </li><li>Select linked bank account to fund wallet
+            </li><li>Click NEXT STEP button
+            </li>
+                <li>Enter 7-digit OTP
+                </li><li>Click CONTINUE button
+                </li><li>Click CONFIRM button
+                </li><li>Click OK button
+                </ol>
+            </td>
+            <td data-column="Input"><ol><li></li><li></li><li>amount to load
+            </li><li>select linked account from allbank
+            </li><li></li>
+                <li>7-digit OTP received via SMS
+                </li><li></li><li></li><li></li><li></li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li>Cash In screen appear on screen
+            </li><li>List of linked bank acounts and available banks is listed
+            </li><li></li><li></li><li>OTP input dialog box will appear
+            </li>
+                <li>7-digit OTP will be sent to subscribers mobile
+                </li><li></li><li>Load transaction summary dialog appear
+                </li><li>Load transaction status dialog appear
+                </li><li>Redirect to cash in, linked Accounts withenrolled account listed
+                </li><li>Funds to reflect to your wallet
+                </li><li>Confirmation receive via SMS
+                </li><li>Receive funds
+                </li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">F. 2. Loading via Direct Bank Account
+                <li>For subscribers with AllBank Account
+                </li>
+            </td>
+            <td data-column="Process"><ol><li>Click Cash In from app dashboard
+            </li><li>Click LINKED ACCOUNTS tab
+            </li><li>Enter load request amount
+            </li><li>Select Load direct from your bank account
+            </li><li>Click NEXT STEP button
+            </li><li>Complete bank KYC
+            </li>
+                <li>Click SUBMIT button to continue
+                </li><li>Key in 6-digit OTP
+                </li><li>Click CONFIRM button
+                </li><li>Select account to fund wallet
+                </li><li>Click CONFIRM button
+                </li><li>Key in 6-digit OTP
+                </li>
+                <li>Click CONFIRM button
+                </li><li>Click OK button
+                </li></ol></td>
+            <td data-column="Input"><ol><li></li><li></li><li>amount to load
+            </li><li>select Allbank
+            </li><li></li><li><ul><li>Amount : prefilled
+            </li><li>Last Name
+            </li><li>First Name
+            </li><li>Middle Name
+            </li><li>Date of Birth
+            </li></ul></li>
+                <li></li><li>6-digit OPT received via sms
+                </li><li></li><li>select an account
+                </li><li></li><li>6-digit OPT received via sms</li>
+                <li>
+                </li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li>Cash In screen appear on screen
+            </li><li>List of linked bank acounts and available banks is listed
+            </li><li></li><li></li><li>Bank KYC screen appear
+            </li><li></li>
+                <li>OTP dialog appear
+                </li><li></li><li>List of account dialog appear
+                </li><li></li><li>
+                </li><li>Load Summary dialog appear</li><li>Load transaction status dialog appear
+                </li><li>Redirect to Cash In, linked Accounts withenrolled account listed
+                </li><li>Should receive loading confirmation via sms
+                </li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">F 3. Unlinking Linked Account
+            <li>For subscribers with Linked AllBank  Bank Account
+            </li></td>
+            <td data-column="Process"><ol><li>Click CASH IN from app dashboard
+            </li><li>Click LINKED ACCOUNTS tab
+            </li><li>Click DELETE icon on the right of the linked account
+            </li><li>Click CONTINUE button
+            </li><li>Click OK button
+            </li></ol></td>
+            <td data-column="Input"><ol><li>
+            </li><li></li><li></li><li></li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li>Cash In screen appear on screen
+            </li><li>List of linked bank acounts and available banks is listed
+            </li><li>Unlink confirmation dialog appear
+            </li><li>Unlink transaction status dialog appear
+            </li><li>Selected account should be removed from the list
+            </li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">G. Cash In (Banks)
+            </td>
+            <td data-column="Process"><ol><li>Click CASH IN
+            </li><li>Select BANKS tab
+            </li><li>Input LOAD AMOUNT
+            </li><li>Select a bank from the list under the ONLINE BANKING section
+            </li><li>Click NEXT STEP button
+            </li>
+                <li>Receive SMS
+                </li><li>Click NEXT button
+                </li><li>Input generated BANK TRANSACTION NUMBER from the selected bank
+                </li><li>Click SUBMIT button
+                </li></ol></td>
+            <td data-column="Input"><ol><li></li><li></li><li>Amount you want load (Minimum of 200 pesos)
+            </li><li>Banks such as BDO, Union Bank, AllBank
+            </li><li></li>
+                <li></li><li></li><li>BANK TRANSACTION NUMBER
+                </li><li>Photo of TRANSACTION RECEIPT
+                </li></ol></td>
+            <td data-column="Expected Result"><ol><li>CASH IN page appear on screen
+            </li><li>All available bank appear on screen
+            </li><li></li><li></li><li>"The app displays generated transaction details containing
+
+                - QR CODE (Android users), 
+                - REFERENCE NUMBER, 
+                - ACCOUNT NAME, 
+                - AMOUNT and INSTRUCTIONS
+                
+                Details such as 
+                - REFERENCE NUMBER
+                - AMOUNT 
+                - BANK NAME 
+                - ACCOUNT NAME
+                - ACCOUNT NUMBER 
+                
+                are sent via SMS"
+                </li>
+                <li></li><li>Proof of deposit screen will appear
+                </li><li></li><li>If the transaction has been successfully validated by AllEasy CSR, FUNDS will reflect to the wallet and subscriber will receive the LOAD REQUEST CONFIRMATION via SMS
+                </li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">H. Cash In (Loading Partners)
+            </td>
+            <td data-column="Process"><ol><li>Click CASH IN
+            </li><li>Select LOADING PARTNERS tab
+            </li><li>Input amount to load
+            </li><li>Select a loading partner from the list below
+            </li><li>Click NEXT STEP button
+            </li><li>Receive SMS
+            </li></ol></td>
+            <td data-column="Input"><ol><li></li><li></li><li>Amount to load (Minimum of 200 pesos)
+            </li><li>Loading partner such as All Home, Primewater, USSC etc.
+            </li><li></li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li>CASH IN page appear on screen
+            </li><li>All Loading Partners appear on screen
+            </li><li></li><li></li><li>"The app displays 
+                generated transaction 
+                details that contains 
+                QR CODE, 
+                REFERENCE NUMBER, 
+                 AMOUNT, and 
+                LOADING INSTRUCTIONS
+                
+                Transaction details that contains the REFERENCE NUMBER and AMOUNT
+                are sent via SMS"
+                </li><li>If transaction is successful, FUNDS will reflect to the wallet and subscriber will receive the LOAD REQUEST CONFIRMATION via SMS
+                </li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">I. Cash In (Kiosk)
+            </td>
+            <td data-column="Process"><ol><li>Click CASH IN
+            </li><li>Click KIOSK tab
+            </li><li>Enter load request amount
+            </li><li>Click NEXT button
+            </li><li>Review your transaction details
+            </li>
+              <li>Click back button
+              </li><li>Go to the nearest AllEasy Kiosk  ( Onsite Process : for reference only, not applicable on testing stage)
+              </li><li>Wait for the load to be process
+              </li><li>Load request notification will be sent to susbscribers mobile number
+              </li></ol></td>
+            <td data-column="Input"><ol><li></li><li></li><li>Amount to load
+            </li><li></li><li></li>
+              <li></li><li></li><li></li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li>Load Wallet screen appear on screen
+            </li><li> Available kiosk appear on screen
+            </li><li></li><li>Payment details appear on screen such as QR Code, Reference no., Amount and Instruction.
+            </li><li>
+            </li>
+              <li>Going back to HOME menu
+              </li><li>Follow the steps on how to load thru kiosk</li><li>Load request confirmation received.
+              </li><li>Check your Available balance.
+              </li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">J. Send Money
+            </td>
+            <td data-column="Process"><li>Send via mobile number
+            </li><ol><li>Click Send Funds
+            </li><li>Click Subscriber's Mobile tab
+            </li><li>Enter Mobile number or click contact button to select receivers mobile number
+            </li><li>Click Next button
+            </li><li>Enter received 6-digit OTP
+            </li><li>Click CONTINUE button
+            </li><li>Click PROCEED button
+            </li></ol></td>
+            <td data-column="Input"><ol><li></li><li></li><li><ul><li>Receiver's mobile number
+            </li><li>Amount to transfer : Php 1.00
+            </li><li>Optional Message :  100 - 160 characrters (punctuation marks are not allowed)
+            </li></ul></li><li></li><li>Received 6-digit OTP via SMS
+            </li><li></li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li>Send Funds screen
+            </li><li>Fill out send form
+            </li><li>Click ALLOW ALLEASY TO ACCESS CONTACT to enable app to access list of contacts
+            </li><li><ul><li>Summary dialog
+            </li><li>OTP Input dialog box will appear
+            </li><li>SMS that contains the 6-digit OTP will be received
+            </li></ul></li><li></li><li>Success dialog box will appear
+            </li><li>The user will be redirected to the homepage
+            </li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">J.1 Send Money
+            </td>
+            <td data-column="Process"><li>Via QR scanning</li><ol><li>Click Scan QR tab
+            </li><li>Scan QR code of subscriber requesting for funds. 
+            </li><li>Key in amount to send
+            </li>
+              <li>Click NEXT button
+              </li><li>Enter received 6-digit OTP
+              </li><li>Click CONFIRM button
+              </li></ol>
+            </td>
+            <td data-column="Input"><img src="scanQR.jpg" style="width:400px;height:200px;"><ol><li></li><li></li>
+              <li>Amount requested by receiver
+              </li><li></li><li>Received 6-digit OTP via SMS
+              </li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li>Camera will open to scan QR code
+            </li><li>"Shows receiver name and mobile number"
+              </li>
+              <li>
+              </li><li></li><ul><li>Payment Summary appears
+              </li><li>OTP Input dialog box will appear
+              </li></ul><li></li><li><ul><li>Fund transfer status appear
+              </li><li>Fund transfer sms notification received
+              </li><li>SMS receive by receiver
+              </li></ul></li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">K. Request Money
+            </td>
+            <td data-column="Process"><ol><li>Click Request Money(android)
+            </li><li>Click SHOW QR tab (ios)
+            </li><li>Click REQUEST tab (ios)
+            </li><li>Key in amount to request
+            </li><li>Click Confirm button
+            </li><li>Sender should scan via QR Payment from app dashboard
+            </li></ol></td>
+            <td data-column="Input"><ol><li></li><li></li><li></li><li>amount to request
+            </li><li></li><li>send a screenshot of your request to miss rachel
+            </li></ol></td>
+            <td data-column="Expected Result"><ol><li><ul><li>Request Funds screen
+            </li><li>ask the sender to scan the qr code
+            </li></ul></li><li><ul><li>Show QR 3 steps how the sender will send funds
+            </li><li>ask the sender to scan the qr code
+            </li></ul>
+            </li><li></li><li></li><li>QR code appear having request details
+            </li><li>Credit should be transfered to receiver
+            </li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">L. QR Payment (Coffee Project)
+            </td>
+            <td data-column="Process"><ol><li>Click QR Payment
+            </li><li>Scan Coffee Project / AllDay QR Code
+            </li><li>Enter the amount to pay
+            </li><li>Click Pay Now
+            </li>
+              <li>Click Confirm
+              </li><li>Enter received 6-digit OTP
+              </li><li>Click Done
+              </li></ol></td>
+            <td data-column="Input"><ol><img src="scanQR2.jpg" style="width:370px;height:200px;"><li></li><li></li><li>Amount to pay
+            </li><li></li>
+              <li></li><li>Your received 6-digit OTP
+              </li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li>QR paymet appear on the screen
+            </li><li>Pay to (Branch name) and Amount to Pay (Exact Amount) appear on screen
+            </li><li></li><li>Payment Summary dialog appear
+            </li>
+              <li>6-digit OTP Input dialog box will appear
+              </li><li>Reference number screen will appear
+              </li><li>Redirect to app dashboard
+              </li><ul><li>Payment confirmation sms received
+              </li></ul></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">M. Pay Bills ( Planet Cable )
+            </td>
+            <td data-column="Process"><ol><li>ClickPay Bills
+            </li><li>Choose/select from the biller category 
+            </li><li>Search for biller
+            </li><li>Click the biller
+            </li><li>Fill out the form
+            </li><li>Click CONFIRM  button
+            </li>
+              <li>Click DONE
+              </li><li>Enter the received 6-digit OTP
+              </li><li>Click CONTINUE
+              </li><li>Review Transaction History
+              </li><li>Click DONE button
+              </li><li>Wait for the payment to be processed
+              </li></ol></td>
+            <td data-column="Input"><ol><li></li><li></li><li>Planet
+            </li><li></li><li><ul><li>ATM REF: 07002170500716
+            </li><li>AMOUNT: Php 1.00
+            </li><li>ACCOUNT NAME: enter your name
+            </li><li>BILL NO.: 1258643
+            </li></ul></li><li></li>
+              <li></li><li>Your received 6-digit  OTP
+              </li><li></li><li></li><li></li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li>Pay bills screen appear on screen
+            </li><li>Billers under selected category is listed
+            </li><li>Searched biller appear on list
+            </li><li>Redirect to biller payment form
+            </li><li></li><li>Payment summary appear on screen
+            </li>
+              <li><ul><li>OTP form dialog box will appear
+              </li><li>SMS that contains the 6-digit OTP will be received
+              </li></ul></li><li></li><li>Payment successful appear on screen
+              </li><li>Transaction Details appear on screen
+              </li><li></li><li><ul><li>Payment notification appear on screen showing payment status
+              </li><li>Subscriber should received an email of payment confirmation from AllEasy
+              </li><li>Subscriber should receive sms of payment confirmation from AllEasy
+              </li></ul></li></ol></td>
+          </tr>
+          <td data-column="Case">M. Pay Bills ( PrimeWater )
+          </td>
+          <td data-column="Process"><ol><li>ClickPay Bills
+          </li><li>Click Water Utilities
+          </li><li>Click selected biller
+          </li><li>Fill out form
+          </li><li>Click Confirm button
+          </li><li>Click done
+          </li>
+            <li>Input received 6-digit OTP via SMS
+            </li><li>Click continue
+            </li><li>Click Proceed button
+            </li><li>Email receipt sent via email
+            </li></ol></td>
+          <td data-column="Input"><ol><li></li><li></li><li>PrimeWater
+          </li><li><ul><li>ATM Ref : 00005307000716
+          </li><li>AMOUNT: Php 1.00
+          </li><li>ACCOUNT NAME: enter your name
+          </li><li>Bill No.: 8636135
+          </li></ul></li><li></li><li></li>
+            <li>Your received 6-digit  OTP</li><li>
+            </li><li></li><li></li><li></li><li></li></ol></td>
+          <td data-column="Expected Result"><ol><li>Pay bills screen appear on screen
+          </li><li>OTP dialog box will appear
+          </li><li>PrimeWater form will appear
+          </li><li>Completed the Fill out form.
+          </li><li>Payment summary appear on screen</li>
+          <li><ul><li>OTP form dialog box will appear
+          </li><li>SMS that contains the 6-digit OTP will be received
+          </li></ul>
+          </li>
+            <li></li><li></li><li>Done transaction
+            </li><li>Should receive e-receipt via email
+            </li></ul></li></ol></td>
+        </tr>
+          <tr>
+            <td data-column="Case">O. Buy Load<li>Smart Load Products only
+            </li>
+            </td>
+            <td data-column="Process"><ol><li>Click Buy Load
+            </li><li>Enter Mobile No. or click CONTACTS button to select phone number from your contact list
+            </li><li>Click Next button
+            </li><li>Select Prepaid Promo
+            </li>
+              <li>Enter received 6-digit OTP
+              </li><li>Click Confirm button
+              </li><li>Cllick Done button
+              </li></ol></td>
+            <td data-column="Input"><ol><li><ul><li>your mobile number
+            </li><li>Select contact from list
+            </li></ul></li><li></li><li>
+            </li>
+              <li>SmartLoad Php 20.00</li><li></li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li>Buy Load screen
+            </li><li>Contacts list will appear if you decided to click the CONTACTS button
+            </li><li>Show Network provider load packages screen
+            </li><li>Payment Summary dialog
+            </li>
+              <li></li><li>Payment successful  dialog
+              </li><li>Sender and Receiver got sms
+              </li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">P. Buy RFID
+            </td>
+            <td data-column="Process"><ol><li>Click RFID
+            </li><li>Selected Provider
+            </li><li>Enter feild requirements
+            </li><li>Click CONFIRM button
+            </li>
+              <li>Review payment summary, click DONE button
+              </li><li>Input received 6-digit OTP
+              </li><li>Click CONTINUE
+              </li></ol></td>
+            <td data-column="Input"><ol><li></li><li>AutoSweep
+            </li><li><ul><li>Account Number : VQ8444
+            </li><li>Amount : 1.50
+            </li><li>Mobile Number : your mobile number
+            </li>
+            </ul></li><li></li>
+              <li></li><li>Your received 6-digit OTP
+              </li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li>RFID screen appear.
+            </li><li>RFID loading for EasyTrip form appear
+            </li><li></li><li>Payment summary dialog appear
+            </li>
+              </li><li><ul><li>OTP Form dialog box will appear</li><li>SMS that contains the 6-digit OTP will be received
+              </li></ul></li><li></li><li>Transaction success dialog box will appear
+              </li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">S. Pay on Delivery (POD)
+            </td>
+            <td data-column="Process"><ol>Click Payment on Delivery</li><ul><li>a.1 Click Select Tab
+            </li>
+            </li><li>a.2 Pay Now 
+            </li><li>a.3 Click Ok
+            </li><li>a.4 Click Continue</li>
+            </li><li>a.5 Click Ok
+            </li>
+            </ul></ol></td>
+            <td data-column="Input"><ol><li><ul><li>Select Merchant to Pay: Coffee Project Las Pinas</li><li>Merchant Delivery No./Bill Ivoice No./OR No.: 09198
+            </li><li>Amount to Pay: 1.2
+            </li><li>Delivery Crew Mobile Number: 09212338806
+            </li>
+            </ul><li></li><li>Enter 6-digit OTP
+            </li><li></li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li></li><li>Payment Summary appears
+            </li><li></li><li>Payment Successful
+            </li><li></li><li></li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">
+            </td>
+            <td data-column="Process"><ol><ul><li>b.1 Click Select Tab
+            </li>
+            </li><li>b.2 Pay Now 
+            </li><li>b.3 Click Ok
+            </li><li>b.4 Click Continue</li>
+            </li><li>b.5 Click Ok
+            </li>
+            </ul></ol></td>
+            <td data-column="Input">
+            <img src="scanQR3.jpg" style="width:200px;height:200px;">
+            <li>Delivery No./Bill Ivoice No./OR No.: 09199
+            </li> <li>Delivery Crew Mobile Number: 09212338806
+            </li><ol><li>
+            </li>
+            <li></li><li>Enter 6-digit OTP
+            </li><li></li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li></li><li>Payment Summary appears
+            </li><li></li><li>Payment Successful
+            </li><li></li><li></li></ol></td>
+          </tr>
+          <tr>
+            <td data-column="Case">
+            </td>
+            <td data-column="Process"><ol><ul><li>c.1 Click Select Tab
+            </li>
+            </li><li>c.2 Pay Now 
+            </li><li>c.3 Click Ok
+            </li><li>c.4 Click Continue</li>
+            </li><li>c.5 Click Ok
+            </li>
+            </ul></ol></td>
+            <td data-column="Input">
+            <ol><li><ul><li>Subscriber's Mobile Number: 09179297684
+            </li><li>Payment Amount:1.2
+            </li><li>Delivery Crew Mobile Number: 09212338806
+            </li><li>Purpose of Payment:Test
+            </li></ul>
+            </li>
+            <li></li><li>Enter 6-digit OTP
+            </li><li></li><li></li></ol></td>
+            <td data-column="Expected Result"><ol><li></li><li>Payment Summary appears
+            </li><li></li><li>Payment Successful
+            </li><li></li><li></li></ol></td>
+          </tr>
+        </tbody>
+      </table>
+</body>
+</html>
